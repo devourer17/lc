@@ -47,10 +47,8 @@ public class RotateArray {
         int temp;
         while (start <= end) {
             temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] = temp;
-            start++;
-            end--;
+            nums[start++] = nums[end];
+            nums[end--] = temp;
         }
     }
 }
