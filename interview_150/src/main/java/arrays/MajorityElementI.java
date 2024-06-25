@@ -1,3 +1,5 @@
+package arrays;
+
 public class MajorityElementI {
 
     // https://leetcode.com/problems/majority-element/description

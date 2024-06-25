@@ -1,3 +1,5 @@
+package arrays;
+
 public class RemoveElement {
 
     // https://leetcode.com/problems/remove-element
