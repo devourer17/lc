@@ -43,16 +43,16 @@ public class SetMatrixZeroes {
     private static void setMatrixZerosV2(int[][] matrix) {
         viewMatrix(matrix);
         System.out.println();
-        int m = matrix[0].length, n = matrix.length;
+        int n = matrix[0].length, m = matrix.length;
         boolean isRow = false, isCol = false;
-
-        for (int i = 0; i < m; i++) {
-            if (matrix[i][0] == 0)
-                isCol = true;
-        }
 
         for (int i = 0; i < n; i++) {
             if (matrix[0][i] == 0)
+                isCol = true;
+        }
+
+        for (int i = 0; i < m; i++) {
+            if (matrix[i][0] == 0)
                 isRow = true;
         }
         for (int i = 1; i < m; i++) {
@@ -73,12 +73,12 @@ public class SetMatrixZeroes {
         }
 
         if (isCol) {
-            for (int i = 0; i < m; i++)
+            for (int i = 0; i < n; i++)
                 matrix[0][i] = 0;
         }
 
         if (isRow) {
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m; i++)
                 matrix[i][0] = 0;
         }
 
